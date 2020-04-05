@@ -76,6 +76,6 @@ return 0;
 double f(double x) {
 return 2*sqrt(1-x*x);
 }
-// Copyright This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License (St. Olaf College)
-// Edits made by Dhruv Seth from the University of California, Irvine
+// Copyright © This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License (St. Olaf College)
+// Edits have been made by Dhruv Seth from the University of California, Irvine
 
