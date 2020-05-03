@@ -66,4 +66,5 @@ int main()
    Note: Correct output values generated for both the CPU and GPU tests 
 */ 
 
-// Coded by Dhruv Seth from University of California, Irvine
+// Prototype Coded by Dhruv Seth from University of California, Irvine 
+// Original Code from /nco/nco_rgr.c 
