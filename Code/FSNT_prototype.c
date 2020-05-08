@@ -43,7 +43,8 @@ int main()
     wgt_raw = wgts;
 
 
-#pragma omp parallel for firstprivate(var_val_dbl_out, var_val_dbl_in) private(lnk_idx) shared(lnk_nbr, row_dst_adr, col_src_adr, wgt_raw) 
+#pragma omp parallel for firstprivate(var_val_dbl_out, var_val_dbl_in) private(lnk_idx) shared(lnk_nbr, row_dst_adr, col_src_adr, wgt_raw) \
+reduction(+:output)
     for (lnk_idx = 0; lnk_idx < lnk_nbr; lnk_idx++)
     {
         var_val_dbl_out[row_dst_adr[lnk_idx]] += var_val_dbl_in[col_src_adr[lnk_idx]] * wgt_raw[lnk_idx];
@@ -58,12 +59,18 @@ int main()
     printf("This program took: %f seconds to run\n", end-start);
 }
 
-/* CPU/GPU Stats
+/* CPU/GPU Stats (w/o reduction clause)
 
-   CPU: 0.011131 seconds 
-   GPU: 0.000356 seconds
+   CPU: ~0.011131 seconds 
+   GPU: ~0.016593 seconds
 
-   Note: Correct output values generated for both the CPU and GPU tests 
+   CPU/GPU Stats (w/ reduction clause)
+
+   CPU: ~0.013351 seconds
+   GPU: ~0.013905 seconds
+
+   Note: Correct output values generated for both the CPU and GPU tests and 
+   ~ = average of 11 runs (omitting the first run)
 */ 
 
 // Prototype Coded by Dhruv Seth from University of California, Irvine 
