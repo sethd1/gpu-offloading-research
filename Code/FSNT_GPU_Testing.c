@@ -46,7 +46,10 @@ CPU Time: 0.0003189 seconds
 GPU Time: 0.0002476 seconds
 
 Observation: May be experiencing slight faster speeds due to the fact that variables 
-             are not being re-initialized in the #pragma statement before the for loop
+             are not being re-declared in the #pragma statement before the for loop
+
+--------------------------------------------------------------------------------------------------
+
 
 
 
