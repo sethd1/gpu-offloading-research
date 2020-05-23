@@ -45,5 +45,5 @@ double end = omp_get_wtime();
 
 // Computation Speeds for Offloading the entire dataset
 
-// CPU Computation Speed = 35.282 seconds 
-// GPU Computation Speed = 5.577 seconds 
+// CPU Computation Speed = 36.9279 seconds 
+// GPU Computation Speed = 5.2713 seconds 
