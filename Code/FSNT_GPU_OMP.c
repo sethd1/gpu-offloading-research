@@ -42,8 +42,3 @@ double end = omp_get_wtime();
          double end = omp_get_wtime();
          (void)fprintf(fp_stdout,"Total time to run multi-level fields without missing values: %f seconds\n", end-start);
 
-
-// Computation Speeds for Offloading the entire dataset
-
-// CPU Computation Speed = 35.282 seconds 
-// GPU Computation Speed = 5.577 seconds 
